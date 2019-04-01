@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { FilmComponent } from './film/film.component';
 import { HighlightDirective } from './highlight.directive';
 import { DisplayMoviesDirective } from './display-movies.directive';
+import { ROUTES } from './app.routes';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +19,13 @@ import { DisplayMoviesDirective } from './display-movies.directive';
     UserProfileComponent,
     FilmComponent,
     HighlightDirective,
-    DisplayMoviesDirective
+    DisplayMoviesDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
